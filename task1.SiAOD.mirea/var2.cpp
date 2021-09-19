@@ -39,7 +39,7 @@ int DeleteBits() {
 
 int Multiplication() {
 	int num;
-	int N = 5;
+	int N = 2;
 
 	cout << "Enter an integer: ";
 	cin >> num;
@@ -51,7 +51,7 @@ int Multiplication() {
 
 int Division() {
 	int num;
-	int N = 5;
+	int N = 2;
 
 	cout << "Enter an integer: ";
 	cin >> num;
