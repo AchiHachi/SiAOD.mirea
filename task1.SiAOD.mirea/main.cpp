@@ -24,7 +24,7 @@ int AddBits(int x) {
 }
 
 int DeleteBits(int x) {
-	int mask = 0x1FFF;
+	int mask = 0xA000;
 	cout << "Mask = ";
 	outBits(mask);
 	cout << endl;
