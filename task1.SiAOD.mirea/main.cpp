@@ -23,18 +23,23 @@ int AddBits(int x) {
 	return x;
 }
 
-int DeleteBits(int x) {
-	int mask = 0xA000;
+int DeleteBits() {
+	int mask = 0xAFF7;
+	int num;
 	cout << "Mask = ";
 	outBits(mask);
 	cout << endl;
-	x = mask & x;
-	return x;
+	cout << "Input number: ";
+	cin >> num;
+	outBits(num);
+	cout << endl;
+	num = mask & num;
+	return num;
 }
 
 int Multiplication() {
 	int num;
-	int N = 2;
+	int N = 5;
 
 	cout << "Enter an integer: ";
 	cin >> num;
@@ -46,7 +51,7 @@ int Multiplication() {
 
 int Division() {
 	int num;
-	int N = 2;
+	int N = 5;
 
 	cout << "Enter an integer: ";
 	cin >> num;
@@ -85,7 +90,7 @@ int main() {
 	cout << endl;
 
 	cout << endl << "Second task: " << endl;
-	x = DeleteBits(x);
+	x = DeleteBits();
 	cout << "Result = ";
 	outBits(x);
 
