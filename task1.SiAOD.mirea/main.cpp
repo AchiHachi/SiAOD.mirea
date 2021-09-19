@@ -15,7 +15,7 @@ void outBits(unsigned int x) {
 }
 
 int AddBits(int x) {
-	int mask = 0x0050;
+	int mask = 0xE000;
 	cout << "Mask = ";
 	outBits(mask);
 	cout << endl;
@@ -24,7 +24,7 @@ int AddBits(int x) {
 }
 
 int DeleteBits(int x) {
-	int mask = 0x1E50;
+	int mask = 0x1FFF;
 	cout << "Mask = ";
 	outBits(mask);
 	cout << endl;
@@ -34,7 +34,7 @@ int DeleteBits(int x) {
 
 int Multiplication() {
 	int num;
-	int N = 8;
+	int N = 2;
 
 	cout << "Enter an integer: ";
 	cin >> num;
@@ -46,7 +46,7 @@ int Multiplication() {
 
 int Division() {
 	int num;
-	int N = 8;
+	int N = 2;
 
 	cout << "Enter an integer: ";
 	cin >> num;
@@ -57,7 +57,9 @@ int Division() {
 }
 
 int EditBits() {
-	int mask = 0x1;
+	int mask = 0x8000;
+	cout << endl;
+	outBits(mask);
 	int num, n;
 
 	cout << "Enter an integer: ";
@@ -68,7 +70,7 @@ int EditBits() {
 
 	cout << "What bit are we changing? Enter the number(0-15): ";
 	cin >> n;
-	mask = mask << n;
+	mask = mask >> 15 - n;
 	return num | mask;
 }
 
@@ -108,5 +110,4 @@ int main() {
 	cout << "Result = ";
 	outBits(x);
 
-	cout << endl;
 }
